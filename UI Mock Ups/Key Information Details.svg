@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="809" viewBox="0 0 375 809">
+  <defs>
+    <rect id="rect-1" width="375" height="83" x="0" y="0" rx="0" ry="0"/>
+    <filter id="filter-2" width="200%" height="200%" x="-50%" y="-50%" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="-.5" in="SourceAlpha" result="shadow-1-feOffset-shadow"/>
+      <feGaussianBlur in="shadow-1-feOffset-shadow" result="shadow-1-feGaussianBlur-shadow" stdDeviation="0"/>
+      <feColorMatrix in="shadow-1-feGaussianBlur-shadow" result="shadow-1-feColorMatrix-shadow" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.3 0"/>
+    </filter>
+  </defs>
+  <g transform="translate(0 729)">
+    <g>
+      <use fill="black" stroke="black" stroke-opacity="0" stroke-width="0" filter="url(#filter-2)" xlink:href="#rect-1"/>
+      <use fill="rgb(247,247,247)" fill-opacity=".8" xlink:href="#rect-1"/>
+    </g>
+    <g transform="translate(282)">
+      <text font-size="0" style="white-space:pre">
+        <tspan x="28.58" y="45" fill="rgb(146,146,146)" font-family="SF Pro Text" font-size="10" font-weight="400" style="white-space:pre" letter-spacing=".12">Key I</tspan>
+      </text>
+      <path fill="rgb(0,0,0)" fill-rule="evenodd" d="M44.125 8c0 1.65685415 1.34314537 3 3 3s3-1.34314585 3-3c0-1.65685427-1.34314537-3-3-3s-3 1.34314573-3 3zm6 8c0-.55228424.44771576-1 1-1h7c.82842636 0 1.5-.67157269 1.5-1.5s-.67157364-1.5-1.5-1.5h-22c-.82842708 0-1.5.67157269-1.5 1.5s.67157292 1.5 1.5 1.5h7c.5522852 0 1 .44771576 1 1v.77323723c0 1.17891216-.12356758 2.35457706-.36867714 3.50772667l-2.3182354 10.90644264c-.1722393.81032372.34502983 1.60684967 1.15535355 1.77908897.81032371.1722393 1.60684967-.34502983 1.77908897-1.15535354l2.51030636-9.8599701c.03406525-.13380432.1701498-.21465682.30395222-.18059158.0887041.02258492.15797424.09183884.18057728.18053818l2.51254368 9.8600235c.1722393.81032371.96876525 1.32759285 1.77908897 1.15535354.81032371-.1722393 1.32759285-.96876525 1.15535355-1.77908897l-2.321867-10.92353153c-.244318-1.14941788-.36748504-2.32127857-.36748504-3.49637509V16z"/>
+    </g>
+    <g transform="translate(188)">
+      <text font-size="0" style="white-space:pre">
+        <tspan x="22.953" y="45" fill="rgb(146,146,146)" font-family="SF Pro Text" font-size="10" font-weight="400" style="white-space:pre" letter-spacing=".12">Sympt</tspan>
+      </text>
+      <g transform="translate(33.125 5)">
+        <path fill="rgb(0,0,0)" fill-rule="evenodd" d="M15.49508127 15.84371611c.09276001.40368607.49509472.65571515.89863971.5629227.21745515-.05000233.40134796-.19429554.50169-.39365571l1.134894-2.25481458 1.23897018 2.23464756c.13388902.24148665.43812272.32867383.679525.19473801.24140226-.13393582.32855898-.43827587.19466996-.67976253l-1.46819732-2.64808922c-.07302631-.13171267-.18400328-.23837959-.31848153-.30611255-.36983574-.18627601-.82060063-.03736664-1.00681155.33259838l-1.0358615 2.05805618-1.23211619-5.36209637c-.0645176-.28077678-.28410922-.499767-.56498602-.5634387-.40382988-.09154383-.80538367.16172848-.8968955.56569952l-1.6478922 7.27447727-.8315156-3.10330249c-.06212363-.2318518-.20554237-.43361463-.40406497-.56844237-.45676892-.3102172-1.07844613-.1912841-1.38855492.26564449l-1.06545586 1.56989182c-.1550544.2284643-.09560863.53941156.13277583.69452015.22838446.1551086.53922307.09564206.69427746-.13282224l1.06545586-1.56989182 1.09323074 4.08005051c.10720243.4000906.51833133.63749298.91828211.53025307.26880574-.07207562.47558667-.28716558.5370915-.55867334l1.62930506-7.1924259 1.14202575 4.97002816z"/>
+        <path fill="rgb(0,0,0)" fill-rule="evenodd" d="M9.5 0v1.5033722H6c-1.10456944 0-2 .89543056-2 2v22c0 1.10457038.89543056 2 2 2h16c1.10457039 0 2-.89542962 2-2v-22c0-1.10456944-.89542961-2-2-2h-3.5V0h-9zm.99929047 1v3h7.00141906V1h-7.00141906zm6.00084686 1h-5.00027466v1h5.00027466V2zM6.5 4.0033722h3V5h9v-.9966278h3v21h-15v-21z"/>
+      </g>
+    </g>
+    <g transform="translate(94)">
+      <text font-size="0" style="white-space:pre">
+        <tspan x="19.646" y="45" fill="rgb(146,146,146)" font-family="SF Pro Text" font-size="10" font-weight="400" style="white-space:pre" letter-spacing=".12">Docum</tspan>
+      </text>
+      <path fill="rgb(0,0,0)" fill-rule="evenodd" d="M40.875 9c-.41421366 0-.75-.33578634-.75-.75s.33578634-.75.75-.75h12.5c.41421318 0 .75.33578634.75.75s-.33578682.75-.75.75h-12.5zm-1 2.5c-.41421366 0-.75-.33578634-.75-.75s.33578634-.75.75-.75h14.5c.41421318 0 .75.33578634.75.75s-.33578682.75-.75.75h-14.5zm-2.25 18v-16c0-.55228472.44771528-1 1-1h17c.55228424 0 1 .44771528 1 1v16c0 .55228424-.44771576 1-1 1h-17c-.55228472 0-1-.44771576-1-1z"/>
+    </g>
+    <g>
+      <text font-size="0" style="white-space:pre">
+        <tspan x="25.289" y="45" fill="rgb(0,122,255)" font-family="SF Pro Text" font-size="10" font-weight="400" style="white-space:pre" letter-spacing=".12">Calen</tspan>
+      </text>
+      <path fill="rgb(0,0,0)" fill-rule="evenodd" d="M40.625 8h13c1.3805008 0 2.5 1.11899996 2.5 2.5v17c0 1.38100052-1.1194992 2.5-2.5 2.5h-13c-1.38049984 0-2.5-1.11899948-2.5-2.5v-17c0-1.38100004 1.11950016-2.5 2.5-2.5zm14 2.5c0-.55149984-.44849968-1-1-1h-13c-.55149984 0-1 .44850016-1 1v17c0 .55150032.44850016 1 1 1h13c.55150032 0 1-.44849968 1-1v-17zm-7.5 2h-5.5c-.27499962 0-.5-.2249999-.5-.5v-.5c0-.2750001.22500038-.5.5-.5h5.5c.27499962 0 .5.2249999.5.5v.5c0 .2750001-.22500038.5-.5.5zm-6 14c0 .27499962.22500038.5.5.5h11c.27499962 0 .5-.22500038.5-.5v-11c0-.27499962-.22500038-.5-.5-.5h-11c-.27499962 0-.5.22500038-.5.5v11z"/>
+    </g>
+  </g>
+  <text font-size="0" style="white-space:pre" transform="translate(18 156)">
+    <tspan x="0" y="17" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">Name</tspan> <tspan x="0" y="39" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">Preferred Name</tspan> <tspan x="0" y="61" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">NHS Number</tspan> <tspan x="0" y="83" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">DOB</tspan> <tspan x="0" y="105" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">Contact Number</tspan> <tspan x="0" y="127" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">Address</tspan>
+  </text>
+  <text font-size="0" style="white-space:pre" transform="translate(18.5 303.5)">
+    <tspan x="0" y="19" fill="rgb(0,0,0)" font-family="SF Pro Display" font-size="20" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing=".38">Hospital Numbers</tspan>
+  </text>
+  <text font-size="0" style="white-space:pre" transform="translate(19 336)">
+    <tspan x="0" y="17" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">Brighton</tspan>
+  </text>
+  <text font-size="0" style="white-space:pre" transform="translate(18 358)">
+    <tspan x="0" y="17" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">London</tspan>
+  </text>
+  <text font-size="0" style="white-space:pre" transform="translate(187 336)">
+    <tspan x="0" y="17" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">9419040984098</tspan>
+  </text>
+  <text font-size="0" style="white-space:pre" transform="translate(186 358)">
+    <tspan x="0" y="17" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">9419</tspan>
+  </text>
+  <path fill="rgb(0,0,0)" fill-rule="evenodd" d="M355.5 314.5v-5c0-.82842712-.67157288-1.5-1.5-1.5s-1.5.67157288-1.5 1.5v5h-5c-.82842712 0-1.5.67157288-1.5 1.5s.67157288 1.5 1.5 1.5h5v5c0 .82842712.67157288 1.5 1.5 1.5s1.5-.67157288 1.5-1.5v-5h5c.82842712 0 1.5-.67157288 1.5-1.5s-.67157288-1.5-1.5-1.5h-5z"/>
+  <text font-size="0" style="white-space:pre" transform="translate(19.5 404.5)">
+    <tspan x="0" y="19" fill="rgb(0,0,0)" font-family="SF Pro Display" font-size="20" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing=".38">Next of Kin</tspan>
+  </text>
+  <path fill="rgb(0,0,0)" fill-rule="evenodd" d="M356.5 415.5v-5c0-.82842712-.67157288-1.5-1.5-1.5s-1.5.67157288-1.5 1.5v5h-5c-.82842712 0-1.5.67157288-1.5 1.5s.67157288 1.5 1.5 1.5h5v5c0 .82842712.67157288 1.5 1.5 1.5s1.5-.67157288 1.5-1.5v-5h5c.82842712 0 1.5-.67157288 1.5-1.5s-.67157288-1.5-1.5-1.5h-5z"/>
+  <text font-size="0" style="white-space:pre" transform="translate(20 434)">
+    <tspan x="0" y="17" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">Mr Simpson (Dad)</tspan> <tspan x="0" y="39" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">555-0003-103</tspan> <tspan x="0" y="61" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">Springfield</tspan>
+  </text>
+  <text font-size="0" style="white-space:pre" transform="translate(18 512)">
+    <tspan x="0" y="17" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">Mrs Simpson (Mum)</tspan> <tspan x="0" y="39" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">555-0003-103</tspan> <tspan x="0" y="61" fill="rgb(0,0,0)" font-family="SF Pro Text" font-size="17" font-weight="400" style="white-space:pre;text-transform:none" letter-spacing="-.41">Springfield</tspan>
+  </text>
+</svg>
