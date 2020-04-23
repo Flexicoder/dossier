@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - master
+defaults:
+  run:
+    shell: bash
+    working-directory: ./codebase/Dossier
 jobs:
   install-and-test:
     runs-on: ubuntu-latest
