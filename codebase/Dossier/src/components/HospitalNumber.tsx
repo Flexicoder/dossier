@@ -34,31 +34,4 @@ export default class HospitalNumber extends Component<HospitalNumberProps> {
             </View>
         );
     }
-
 }
-
-// const HospitalNumber = () => {
-//     const [hospitalNumber, setHosiptalNumber] = useState('');
-//     const [hospitalName, setHosiptalName] = useState('');
-//     return (
-//         <View style={styles.container}>
-//             <View style={styles.line}>
-//                 <View style={styles.textBox}>
-//                 <TextInput
-//             placeholder="Hospital Number"
-//             onChangeText={hospitalNumber => setHosiptalNumber(hospitalNumber)}
-//             defaultValue={hospitalNumber} />
-//                 </View>
-//                 <View style={styles.textBox}>
-//                 <TextInput
-//             placeholder="Hospital Name"
-//             onChangeText={hospitalName => setHosiptalName(hospitalName)}
-//             defaultValue={hospitalName}
-//              />
-//                 </View>
-//             </View>
-//         </View>
-//     );
-//   };
-
-//   export default HospitalNumber;
