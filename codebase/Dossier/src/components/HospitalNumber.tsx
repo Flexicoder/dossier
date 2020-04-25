@@ -1,5 +1,5 @@
-import React, { Component, useState } from 'react';
-import { Text, TextInput, View } from 'react-native';
+import React, { Component } from 'react';
+import { TextInput, View } from 'react-native';
 import  styles  from '../assets/styles'
 
 interface HospitalNumberProps {
