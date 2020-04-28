@@ -5,7 +5,6 @@ exports[`Hospital number renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "white",
       "flex": 1,
       "flexDirection": "column",
       "justifyContent": "center",
