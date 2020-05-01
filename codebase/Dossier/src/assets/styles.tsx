@@ -2,6 +2,17 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 const styles = StyleSheet.create({
+    scrollContainer: {
+        flex: 1
+      },
+      scrollview: {
+        flexGrow: 1,
+      },
+      scrollContent: {
+        flexGrow: 1,
+        justifyContent: "space-between",
+        padding: 10,
+      },
     container: {
         alignItems: 'center',
         flexDirection: 'column',
