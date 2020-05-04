@@ -76,7 +76,7 @@ exports[`Key Information renders correctly 1`] = `
     Date Of Birth
   </Text>
   <RNDateTimePicker
-    date={1588080856330}
+    date={1588595312810}
     mode="date"
     onChange={[Function]}
     onResponderTerminationRequest={[Function]}

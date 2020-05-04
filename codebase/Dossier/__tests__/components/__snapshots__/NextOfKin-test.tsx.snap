@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Key Information renders correctly 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
+    }
+  }
+>
   <View
     style={
       Object {
@@ -29,6 +38,7 @@ exports[`Key Information renders correctly 1`] = `
     >
       <TextInput
         allowFontScaling={true}
+        defaultValue=""
         onChangeText={[Function]}
         placeholder="Name"
         rejectResponderTermination={true}
