@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Medical History renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "margin": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "borderColor": "lightgrey",
+          "borderWidth": 1,
+          "color": "grey",
+          "flexGrow": 1,
+          "fontSize": 18,
+          "margin": 5,
+          "padding": 5,
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        defaultValue=""
+        multiline={true}
+        onChangeText={[Function]}
+        placeholder="Details"
+        rejectResponderTermination={true}
+        underlineColorAndroid="transparent"
+      />
+    </View>
+  </View>
+</View>
+`;
