@@ -17,8 +17,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'column',
         justifyContent: 'center',
-        flex: 1,
-        backgroundColor: 'white'
+        flex: 1
     },
     line: {
         flexDirection: 'row',
