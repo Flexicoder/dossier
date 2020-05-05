@@ -6,7 +6,7 @@ import NextOfKin from '../../src/components/NextOfKin';
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-describe("Key Information", () => {
+describe("Next Of Kin", () => {
     it('renders correctly', () => {
         const nextOfKin = renderer.create(<NextOfKin />);
         expect(nextOfKin.toJSON()).toMatchSnapshot();
@@ -14,7 +14,7 @@ describe("Key Information", () => {
 })
 
 
-describe("Key Information", () => {
+describe("Next Of Kin", () => {
     it('contains supplied data', () => {
         const nextOfKin = renderer.create(<NextOfKin name="Bob" relationship="Father" />);
         const stringVersion = JSON.stringify(nextOfKin.toJSON())
