@@ -10,6 +10,7 @@ import KeyInformation from '../components/KeyInformation';
 import MedicalHistory from '../components/MedicalHistory';
 import Medication from '../components/Medication';
 import Allergy from '../components/Allergy';
+import MedicalDetail from '../components/MedicalDetail';
 
 const KeyInfoPage = () => {
 
@@ -26,6 +27,7 @@ const KeyInfoPage = () => {
         >
           <Text>Key Info</Text>
           <KeyInformation name=""  />
+          <MedicalDetail />
           <HospitalNumber  name="Brighton" number="93993" />
           <NextOfKin />
           <MedicalHistory />
