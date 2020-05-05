@@ -8,6 +8,7 @@ import HospitalNumber from '../components/HospitalNumber'
 import NextOfKin from '../components/NextOfKin'
 import KeyInformation from '../components/KeyInformation';
 import MedicalHistory from '../components/MedicalHistory';
+import Medication from '../components/Medication';
 
 const KeyInfoPage = () => {
 
@@ -27,6 +28,7 @@ const KeyInfoPage = () => {
           <HospitalNumber  name="Brighton" number="93993" />
           <NextOfKin />
           <MedicalHistory />
+          <Medication />
       </KeyboardAwareScrollView>
 
     </SafeAreaView>
