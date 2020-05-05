@@ -9,6 +9,7 @@ import NextOfKin from '../components/NextOfKin'
 import KeyInformation from '../components/KeyInformation';
 import MedicalHistory from '../components/MedicalHistory';
 import Medication from '../components/Medication';
+import Allergy from '../components/Allergy';
 
 const KeyInfoPage = () => {
 
@@ -29,6 +30,7 @@ const KeyInfoPage = () => {
           <NextOfKin />
           <MedicalHistory />
           <Medication />
+          <Allergy />
       </KeyboardAwareScrollView>
 
     </SafeAreaView>
