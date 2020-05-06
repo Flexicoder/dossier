@@ -72,6 +72,7 @@ const images = {
     wistling_emoticon: require('./img/wistling_emoticon_2993605.png'),
     wondering_emoticon: require('./img/wondering_emoticon_2993604.png'),
     zipped_emoticon: require('./img/zipped_emoticon_2993599.png'),
+    empty: require('./img/empty.png')
 }
 
 export default images
