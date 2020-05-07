@@ -1,5 +1,5 @@
 
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     scrollContainer: {
@@ -26,6 +26,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         margin: 5
     },
+    wrapLine: {
+      flexDirection: 'row',
+      flexWrap: 'wrap'
+  },
     textBox: {
         color: 'grey',
         fontSize: 18,
@@ -36,6 +40,33 @@ const styles = StyleSheet.create({
         padding: 5,
         margin: 5
 
+    },
+    emotContainer: {
+      alignItems: 'center'
+    },
+    emoticon: {
+      width: 30,
+      height: 30,
+      resizeMode: 'contain',
+      margin:9 },
+
+    emoticonBorder: {
+      width: 38,
+      height: 38,
+      resizeMode: 'contain',
+      borderWidth: 2,
+      borderRadius: 30,
+      margin:5, 
+      position: 'absolute'
+    },
+    emoticonSelected: {
+      borderColor: 'red',
+    },
+    emoticonNotSelected: {
+      borderColor: '#d0d0d0',
+    },
+    emoticonTransparentOverlay : {
+      opacity: 0
     }
 })
 

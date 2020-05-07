@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmojiSelector renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/assets/img/crazy_emoticon_2993650.png",
+        }
+      }
+      style={
+        Object {
+          "height": 30,
+          "margin": 9,
+          "resizeMode": "contain",
+          "width": 30,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 30,
+            "borderWidth": 2,
+            "height": 38,
+            "margin": 5,
+            "position": "absolute",
+            "resizeMode": "contain",
+            "width": 38,
+          },
+          Object {
+            "borderColor": "#d0d0d0",
+          },
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/assets/img/empty.png",
+          }
+        }
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/assets/img/disgusted_emoticon_1_2993645.png",
+        }
+      }
+      style={
+        Object {
+          "height": 30,
+          "margin": 9,
+          "resizeMode": "contain",
+          "width": 30,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 30,
+            "borderWidth": 2,
+            "height": 38,
+            "margin": 5,
+            "position": "absolute",
+            "resizeMode": "contain",
+            "width": 38,
+          },
+          Object {
+            "borderColor": "#d0d0d0",
+          },
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/assets/img/empty.png",
+          }
+        }
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
