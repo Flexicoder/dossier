@@ -64,6 +64,9 @@ const styles = StyleSheet.create({
     },
     emoticonNotSelected: {
       borderColor: '#d0d0d0',
+    },
+    emoticonTransparentOverlay : {
+      opacity: 0
     }
 })
 

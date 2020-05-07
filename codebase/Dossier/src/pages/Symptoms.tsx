@@ -80,8 +80,10 @@ const SymptomsPage = () => {
 
     return (
       <View style={styles.container}>
-        <Text>Symptoms</Text>
-        <EmojiSelector options={theseOptions} selectedValues={[]} />
+        <Text>Single Symptoms</Text>
+        <EmojiSelector options={theseOptions} />
+        <Text>Multiple Symptoms</Text>
+        <EmojiSelector options={theseOptions} multiSelection={true} />
       </View>
     );
   };
