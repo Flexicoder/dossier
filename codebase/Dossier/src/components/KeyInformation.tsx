@@ -11,6 +11,7 @@ interface KeyInformationProps {
     contactNumber?: string | null;
     email?: string | null;
     nhsNumber?: string | null;
+    onKeyInfoChange: any
 }
 
 export default class KeyInformation extends Component<KeyInformationProps> {
@@ -23,11 +24,17 @@ export default class KeyInformation extends Component<KeyInformationProps> {
                        contactNumber: props.contactNumber,
                        email: props.email,
                        nhsNumber: props.nhsNumber }
+
+        this.onTextChange = this.onTextChange.bind(this)
+    }
+
+    onTextChange(propertyName, value) {
+        this.props.onKeyInfoChange(propertyName, value);
     }
 
     onChange = (event: any, selectedDate: Date | null | undefined) => {
         const currentDate = selectedDate || this.props.dateOfBirth;
-        this.setState( { dateOfBirth: currentDate });
+        this.onTextChange('dateOfBirth', currentDate);
       };
 
     render() {
@@ -37,7 +44,7 @@ export default class KeyInformation extends Component<KeyInformationProps> {
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="Your Name"
-                            onChangeText={text => this.setState({ name: text})}
+                            onChangeText={text => this.onTextChange('name', text)}
                             defaultValue={this.props.name} />
                     </View>
                 </View>
@@ -45,7 +52,7 @@ export default class KeyInformation extends Component<KeyInformationProps> {
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="Preferred Name"
-                            onChangeText={text => this.setState( { preferredName: text })}
+                            onChangeText={text => this.onTextChange('preferredName', text)}
                             defaultValue={this.props.preferredName || ""}
                             />
                     </View>
@@ -53,7 +60,7 @@ export default class KeyInformation extends Component<KeyInformationProps> {
 
                 <Text>Date Of Birth</Text>
                 <DateTimePicker
-                    value={this.state.dateOfBirth}
+                    value={this.props.dateOfBirth}
                     onChange={this.onChange}
                     />
 
@@ -61,7 +68,7 @@ export default class KeyInformation extends Component<KeyInformationProps> {
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="Address"
-                            onChangeText={text => this.setState( { address: text })}
+                            onChangeText={text => this.onTextChange('address', text)}
                             defaultValue={this.props.address || ""}
                             />
                     </View>
@@ -70,7 +77,7 @@ export default class KeyInformation extends Component<KeyInformationProps> {
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="Contact Number"
-                            onChangeText={text => this.setState( { contactNumber: text })}
+                            onChangeText={text => this.onTextChange('contactNumber', text )}
                             defaultValue={this.props.contactNumber || ""}
                             />
                     </View>
@@ -79,7 +86,7 @@ export default class KeyInformation extends Component<KeyInformationProps> {
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="Email"
-                            onChangeText={text => this.setState( { email: text })}
+                            onChangeText={text => this.onTextChange('email', text )}
                             defaultValue={this.props.email || ""}
                             />
                     </View>
@@ -88,7 +95,7 @@ export default class KeyInformation extends Component<KeyInformationProps> {
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="NHS Number"
-                            onChangeText={text => this.setState( { nhsNumber: text })}
+                            onChangeText={text => this.onTextChange( 'nhsNumber', text )}
                             defaultValue={this.props.nhsNumber || ""}
                             />
                     </View>
