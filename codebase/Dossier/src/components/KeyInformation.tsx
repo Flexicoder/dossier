@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import { Text, TextInput, View, Platform } from 'react-native';
+import { Text, TextInput, View } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import  styles  from '../assets/styles'
+import styles from '../assets/styles'
 
-interface KeyInformationProps {
+interface IKeyInformationComponent {
+    data: IKeyInformationProps
+    onTextChange: any
+}
+
+interface IKeyInformationProps {
     name: string;
     preferredName?: string | null;
     dateOfBirth?: Date;
@@ -11,41 +16,33 @@ interface KeyInformationProps {
     contactNumber?: string | null;
     email?: string | null;
     nhsNumber?: string | null;
-    onKeyInfoChange: any
+
 }
 
-export default class KeyInformation extends Component<KeyInformationProps> {
-    constructor(props: KeyInformationProps) {
+export default class KeyInformation extends Component<IKeyInformationComponent> {
+    constructor(props: IKeyInformationComponent) {
         super(props)
-        this.state = { name: props.name,
-                       preferredName: props.preferredName,
-                       dateOfBirth: props.dateOfBirth || new Date(),
-                       address: props.address,
-                       contactNumber: props.contactNumber,
-                       email: props.email,
-                       nhsNumber: props.nhsNumber }
-
         this.onTextChange = this.onTextChange.bind(this)
     }
 
     onTextChange(propertyName, value) {
-        this.props.onKeyInfoChange(propertyName, value);
+        this.props.onTextChange('keyInfo', propertyName, value);
     }
 
     onChange = (event: any, selectedDate: Date | null | undefined) => {
-        const currentDate = selectedDate || this.props.dateOfBirth;
+        const currentDate = selectedDate || this.props.data.dateOfBirth;
         this.onTextChange('dateOfBirth', currentDate);
-      };
+    };
 
     render() {
         return (
-        <View >
+            <View >
                 <View style={styles.line}>
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="Your Name"
                             onChangeText={text => this.onTextChange('name', text)}
-                            defaultValue={this.props.name} />
+                            defaultValue={this.props.data.name} />
                     </View>
                 </View>
                 <View style={styles.line}>
@@ -53,51 +50,51 @@ export default class KeyInformation extends Component<KeyInformationProps> {
                         <TextInput
                             placeholder="Preferred Name"
                             onChangeText={text => this.onTextChange('preferredName', text)}
-                            defaultValue={this.props.preferredName || ""}
-                            />
+                            defaultValue={this.props.data.preferredName || ""}
+                        />
                     </View>
                 </View>
 
                 <Text>Date Of Birth</Text>
                 <DateTimePicker
-                    value={this.props.dateOfBirth}
+                    value={this.props.data.dateOfBirth}
                     onChange={this.onChange}
-                    />
+                />
 
                 <View style={styles.line}>
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="Address"
                             onChangeText={text => this.onTextChange('address', text)}
-                            defaultValue={this.props.address || ""}
-                            />
+                            defaultValue={this.props.data.address || ""}
+                        />
                     </View>
                 </View>
                 <View style={styles.line}>
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="Contact Number"
-                            onChangeText={text => this.onTextChange('contactNumber', text )}
-                            defaultValue={this.props.contactNumber || ""}
-                            />
+                            onChangeText={text => this.onTextChange('contactNumber', text)}
+                            defaultValue={this.props.data.contactNumber || ""}
+                        />
                     </View>
                 </View>
                 <View style={styles.line}>
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="Email"
-                            onChangeText={text => this.onTextChange('email', text )}
-                            defaultValue={this.props.email || ""}
-                            />
+                            onChangeText={text => this.onTextChange('email', text)}
+                            defaultValue={this.props.data.email || ""}
+                        />
                     </View>
                 </View>
                 <View style={styles.line}>
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="NHS Number"
-                            onChangeText={text => this.onTextChange( 'nhsNumber', text )}
-                            defaultValue={this.props.nhsNumber || ""}
-                            />
+                            onChangeText={text => this.onTextChange('nhsNumber', text)}
+                            defaultValue={this.props.data.nhsNumber || ""}
+                        />
                     </View>
                 </View>
             </View>

@@ -2,20 +2,26 @@ import React, { Component } from 'react';
 import { TextInput, View } from 'react-native';
 import  styles  from '../assets/styles'
 
-interface MedicalDetailProps {
+interface IMedicalDetailComponent {
+    data: IMedicalDetailProps
+    onTextChange: any
+}
+
+interface IMedicalDetailProps {
     treatments?: string | null;
     consultant?: string | null;
     clinicalNurseSpecialist?: string | null;
     diagnosis?: string | null;
 }
 
-export default class MedicalDetail extends Component<MedicalDetailProps> {
-    constructor(props: MedicalDetailProps) {
+export default class MedicalDetail extends Component<IMedicalDetailProps> {
+    constructor(props: IMedicalDetailComponent) {
         super(props)
-        this.state = { name: props.treatments,
-                       relationship: props.consultant,
-                       address: props.clinicalNurseSpecialist,
-                       contactNumber: props.diagnosis }
+        this.onTextChange = this.onTextChange.bind(this)
+    }
+                
+    onTextChange(propertyName, value) {
+        this.props.onTextChange('medicalDetail', propertyName, value);
     }
 
     render() {
@@ -26,16 +32,16 @@ export default class MedicalDetail extends Component<MedicalDetailProps> {
                         <TextInput
                             placeholder="Treatments"
                             multiline={true}
-                            onChangeText={text => this.setState({ treatments: text})}
-                            defaultValue={this.props.treatments || ""} />
+                            onChangeText={text => this.onTextChange('treatments', text)}
+                            defaultValue={this.props.data.treatments || ""} />
                     </View>
                 </View>
                 <View style={styles.line}>
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="Consultant"
-                            onChangeText={text => this.setState( { consultant: text })}
-                            defaultValue={this.props.consultant || ""}
+                            onChangeText={text => this.onTextChange('consultant', text )}
+                            defaultValue={this.props.data.consultant || ""}
                             />
                     </View>
                 </View>
@@ -43,8 +49,8 @@ export default class MedicalDetail extends Component<MedicalDetailProps> {
                     <View style={styles.textBox}>
                         <TextInput
                             placeholder="Clinical Nurse Specialist"
-                            onChangeText={text => this.setState( { clinicalNurseSpecialist: text })}
-                            defaultValue={this.props.clinicalNurseSpecialist || ""}
+                            onChangeText={text => this.onTextChange('clinicalNurseSpecialist', text )}
+                            defaultValue={this.props.data.clinicalNurseSpecialist || ""}
                             />
                     </View>
                 </View>
@@ -53,8 +59,8 @@ export default class MedicalDetail extends Component<MedicalDetailProps> {
                         <TextInput
                             placeholder="Diagnosis"
                             multiline={true}
-                            onChangeText={text => this.setState( { diagnosis: text })}
-                            defaultValue={this.props.diagnosis || ""}
+                            onChangeText={text => this.onTextChange('diagnosis', text )}
+                            defaultValue={this.props.data.diagnosis || ""}
                             />
                     </View>
                 </View>

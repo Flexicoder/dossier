@@ -9,20 +9,11 @@ import type { IKeyInformationModel} from '../models/KeyInformationModel';
 export type IKeyInformationAction = {
     save(keyInformation: IKeyInformationModel): Promise<KeyInformationModel>,
     retrieve(): IKeyInformationModel,
+    clone(): IKeyInformationModel,
 }
 
-/**
- * create customer realm action to save the customer data
- * @param {Realm} realmInstance
- * @return {Object}
- */
 export default (realmInstance: any): IKeyInformationAction => {
   return {
-    /**
-       * set the key information
-       * @param {any} keyInformation response from server
-       * @return {Promise<KeyInformationModel>} saved Key Information object
-       */
     save: (keyInformationData: IKeyInformationModel): Promise<KeyInformationModel> => {
       const {_id, name, preferredName, dateOfBirth, address, contactNumber, email, nhsNumber} = keyInformationData;
 
@@ -40,11 +31,10 @@ export default (realmInstance: any): IKeyInformationAction => {
           };
           realmInstance.write(()=> {
             const savedKeyInfo = realmInstance.create(KeyInformationModel.modelName(), keyInformation, true);
-            console.log(savedKeyInfo)
             resolve(savedKeyInfo);
           });
         } catch (error) {
-            console.log(error)
+          console.log(error)
           resolve(error);
         }
       });
@@ -54,8 +44,23 @@ export default (realmInstance: any): IKeyInformationAction => {
      * @return {IKeyInformationModel}
      */
     retrieve: (): IKeyInformationModel => {
-        const data = realmInstance.objects('KeyInformation');
+        const data = realmInstance.objects(KeyInformationModel.modelName());
       return data;
     },
+    clone: (): IKeyInformationModel => {
+        // Realm doesn't actually populate object properties until you reference them
+        // You also can't use a Realmn object in state as they are immutable, so
+        // we make a copy here and return it for the views to use in their state
+        const data = realmInstance.objects(KeyInformationModel.modelName());
+        let clone: IKeyInformationModel = {dateOfBirth: new Date()};
+
+        if(data.length > 0) {
+            const realmObject: IKeyInformationModel = data[0]
+            for (const key in realmObject) {
+                clone[key] = realmObject[key];
+            }
+          }
+        return clone
+    }
   };
 };

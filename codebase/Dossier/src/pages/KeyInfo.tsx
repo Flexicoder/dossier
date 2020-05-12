@@ -11,63 +11,52 @@ import MedicalHistory from '../components/MedicalHistory';
 import Medication from '../components/Medication';
 import Allergy from '../components/Allergy';
 import MedicalDetail from '../components/MedicalDetail';
-import { keyInformationActions } from '@dossier-storage/realm';
+import { keyInformationActions, medicalDetailActions } from '@dossier-storage/realm';
 import { IKeyInformationModel } from 'src/storage/realm/models/KeyInformationModel';
+import { IMedicalDetailModel } from 'src/storage/realm/models/MedicalDetailModel';
 
 
 export default class KeyInfoPage extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { name: props.name,
-                   preferredName: props.preferredName,
-                   dateOfBirth: props.dateOfBirth || new Date(),
-                   address: props.address,
-                   contactNumber: props.contactNumber,
-                   email: props.email,
-                   nhsNumber: props.nhsNumber }
-    this.handleKeyInfoChange = this.handleKeyInfoChange.bind(this);
+
+    //Set default stat values, so the screen can load before Realm responds
+    this.state = {keyInfo: { dateOfBirth: new Date() },
+                  medicalDetail: {}}
+
+    this.handleTextChange = this.handleTextChange.bind(this);
     this.save = this.save.bind(this)
   }
 
-   handleKeyInfoChange(propertyName: string, value: any) {
-     this.setState({[propertyName]: value })
+   handleTextChange(baseObject: string , propertyName: string, value: any) {
+     //get the object
+     const element = this.state[baseObject]
+     //change the value
+     element[propertyName] = value
+     // update the state
+     this.setState({[baseObject]: element })
    }
 
    save() {
-    keyInformationActions.save( { _id: 1,
-            name: this.state.name,
-            address: this.state.address,
-            contactNumber: this.state.contactNumber,
-            dateOfBirth: this.state.dateOfBirth,
-            email: this.state.email,
-            nhsNumber: this.state.nhsNumber,
-            preferredName: this.state.preferredName});
+    const keyInfo: IKeyInformationModel = this.state['keyInfo']
+    keyInfo._id = 1
+    keyInformationActions.save(keyInfo)
+
+    const medicalDetails: IMedicalDetailModel = this.state['medicalDetail']
+    medicalDetails._id = 1
+    medicalDetailActions.save(medicalDetails)
+
    }
 
   componentDidMount() {
-    const ki = keyInformationActions.retrieve()
+    this.setState({keyInfo: keyInformationActions.clone()})
 
-    if(ki.length > 0) {
-      const keyInfo: IKeyInformationModel = ki[0]
-      this.setState({ name: keyInfo.name,
-        preferredName: keyInfo.preferredName,
-        dateOfBirth: keyInfo.dateOfBirth,
-        address: keyInfo.address,
-        contactNumber: keyInfo.contactNumber,
-        email: keyInfo.email,
-        nhsNumber: keyInfo.nhsNumber})
-    } else {
-      this.state = {  name: '',
-        preferredName: '',
-        dateOfBirth: new Date(),
-        address: '',
-        contactNumber: '',
-        email: '',
-        nhsNumber: '' }
-    }
+    this.setState({medicalDetail: medicalDetailActions.clone()})
 }
 
     render () {
+      const keyInfo = this.state['keyInfo']
+      const medicalDetail = this.state['medicalDetail']
       return (
         <SafeAreaView style={styles.scrollContainer}>
         <StatusBar barStyle="light-content" backgroundColor="#468189" />
@@ -81,15 +70,10 @@ export default class KeyInfoPage extends React.Component {
           >
             <Button title="Save" onPress={this.save}></Button>
             <Text>Key Info</Text>
-            <KeyInformation name={this.state.name}
-            preferredName={this.state.preferredName}
-            dateOfBirth={this.state.dateOfBirth}
-            address={this.state.address}
-            contactNumber={this.state.contactNumber}
-            email={this.state.email}
-            nhsNumber={this.state.nhsNumber}
-               onKeyInfoChange={this.handleKeyInfoChange} />
-            <MedicalDetail />
+            <KeyInformation data={keyInfo}
+                  onTextChange={this.handleTextChange} />
+            <MedicalDetail data={medicalDetail}
+                  onTextChange={this.handleTextChange}/>
             <HospitalNumber  name="Brighton" number="93993" />
             <NextOfKin />
             <MedicalHistory />

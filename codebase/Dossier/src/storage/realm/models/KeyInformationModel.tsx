@@ -1,5 +1,5 @@
 export default class KeyInformationModel {
-    static modelName() {
+    static modelName(): string {
         return KeyInformationModel.schema.name; 
     }
     static primaryKey() {
@@ -13,12 +13,12 @@ export default class KeyInformationModel {
         'properties': {
             '_id': 'int',
             'name': 'string',
-            'preferredName': 'string',
-            'dateOfBirth': 'date',
-            'address': 'string',
-            'contactNumber': 'string',
-            'email': 'string',
-            'nhsNumber': 'string'
+            'preferredName': 'string?',
+            'dateOfBirth': 'date?',
+            'address': 'string?',
+            'contactNumber': 'string?',
+            'email': 'string?',
+            'nhsNumber': 'string?'
         }
     }
 }
