@@ -8,7 +8,8 @@ import renderer from 'react-test-renderer';
 
 describe("Hospital number", () => {
     it('renders correctly', () => {
-        const hospitalNumber = renderer.create(<HospitalNumber name="Brighton" number="123" />);
+      const data = {_id:1, name:'Brighton', number:"123"}
+        const hospitalNumber = renderer.create(<HospitalNumber data={data} onTextChange=""  />);
         expect(hospitalNumber.toJSON()).toMatchSnapshot();
       });
 })
@@ -16,7 +17,8 @@ describe("Hospital number", () => {
 
 describe("Hospital number", () => {
     it('contains supplied data', () => {
-        const hospitalNumber = renderer.create(<HospitalNumber name="Brighton" number="123" />);
+        const data = {_id:1, name:'Brighton', number:"123"}
+        const hospitalNumber = renderer.create(<HospitalNumber data={data} onTextChange=""  />);
         const stringVersion = JSON.stringify(hospitalNumber.toJSON())
         expect(stringVersion).toMatch(/Brighton/);
         expect(stringVersion).toMatch(/123/);

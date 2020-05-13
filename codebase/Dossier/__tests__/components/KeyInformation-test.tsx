@@ -8,7 +8,8 @@ import renderer from 'react-test-renderer';
 
 describe("Key Information", () => {
     it('renders correctly', () => {
-        const keyInformation = renderer.create(<KeyInformation name="" dateOfBirth={ new Date(1588595312810)}/>);
+        const keyInfo = {name: "", dateOfBirth: new Date(1588595312810)}
+        const keyInformation = renderer.create(<KeyInformation data={keyInfo} onTextChange=""/>);
         expect(keyInformation.toJSON()).toMatchSnapshot();
       });
 })
@@ -16,7 +17,8 @@ describe("Key Information", () => {
 
 describe("Key Information", () => {
     it('contains supplied data', () => {
-        const keyInformation = renderer.create(<KeyInformation name="Bob" dateOfBirth={ new Date(1588595312810)} />);
+      const keyInfo = {dateOfBirth: new Date(1588595312810), name: "Bob"}
+      const keyInformation = renderer.create(<KeyInformation data={keyInfo} onTextChange="" />);
         const stringVersion = JSON.stringify(keyInformation.toJSON())
         expect(stringVersion).toMatch(/Bob/);
       });

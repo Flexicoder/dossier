@@ -8,12 +8,19 @@ import MedicalDetailAction from './actions/MedicalDetailAction';
 import MedicalDetailModel from './models/MedicalDetailModel';
 import type{IMedicalDetailAction} from './actions/MedicalDetailAction';
 
+import HospitalNumberAction from './actions/HospitalNumberAction';
+import HospitalNumberModel from './models/HospitalNumberModel';
+import type{IHospitalNumberAction} from './actions/HospitalNumberAction';
+
 const localRealmInstance = new Realm({
-  schema: [KeyInformationModel, MedicalDetailModel],
+  schema: [KeyInformationModel, 
+           MedicalDetailModel, 
+           HospitalNumberModel],
 });
 
 
 export const getRealmInstance = (): Realm => localRealmInstance;
 
-export const keyInformationActions: IKeyInformationAction = KeyInformationAction(getRealmInstance());
-export const medicalDetailActions: IMedicalDetailAction = MedicalDetailAction(getRealmInstance());
+export const keyInformation: IKeyInformationAction = KeyInformationAction(getRealmInstance());
+export const medicalDetail: IMedicalDetailAction = MedicalDetailAction(getRealmInstance());
+export const hospitalNumber: IHospitalNumberAction = HospitalNumberAction(getRealmInstance());
