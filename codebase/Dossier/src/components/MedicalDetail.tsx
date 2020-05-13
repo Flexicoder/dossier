@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { TextInput, View } from 'react-native';
 import  styles  from '../assets/styles'
+import * as Constants from '../assets/constants'
 
 interface IMedicalDetailComponent {
     data: IMedicalDetailProps
@@ -21,7 +22,7 @@ export default class MedicalDetail extends Component<IMedicalDetailProps> {
     }
                 
     onTextChange(propertyName, value) {
-        this.props.onTextChange('medicalDetail', propertyName, value);
+        this.props.onTextChange(Constants.MEDICAL_DETAIL, propertyName, value);
     }
 
     render() {

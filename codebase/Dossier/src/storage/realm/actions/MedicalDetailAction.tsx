@@ -1,6 +1,7 @@
 // @flow
 import MedicalDetailModel from '../models/MedicalDetailModel';
 import type { IMedicalDetailModel} from '../models/MedicalDetailModel';
+import * as Constants from '../../../assets/constants'
 
 /**
  * Flow type of customerAction
@@ -27,7 +28,7 @@ export default (realmInstance: any): IMedicalDetailAction => {
             diagnosis: diagnosis
           };
           realmInstance.write(()=> {
-            const savedMedicalDetail = realmInstance.create(MedicalDetailModel.modelName(), medicalDetail, true);
+            const savedMedicalDetail = realmInstance.create(Constants.MEDICAL_DETAIL, medicalDetail, true);
             resolve(savedMedicalDetail);
           });
         } catch (error) {
@@ -41,14 +42,14 @@ export default (realmInstance: any): IMedicalDetailAction => {
      * @return {IMedicalDetailModel}
      */
     retrieve: (): IMedicalDetailModel => {
-        const data = realmInstance.objects(MedicalDetailModel.modelName());
+        const data = realmInstance.objects(Constants.MEDICAL_DETAIL);
       return data;
     },
     clone: (): IMedicalDetailModel => {
         // Realm doesn't actually populate object properties until you reference them
         // You also can't use a Realmn object in state as they are immutable, so
         // we make a copy here and return it for the views to use in their state
-        const data = realmInstance.objects(MedicalDetailModel.modelName());
+        const data = realmInstance.objects(Constants.MEDICAL_DETAIL);
         let clone: IMedicalDetailModel = {};
 
         if(data.length > 0) {

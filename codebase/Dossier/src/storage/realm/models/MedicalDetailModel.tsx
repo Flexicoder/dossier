@@ -1,13 +1,12 @@
+import * as Constants from '../../../assets/constants'
+
 export default class MedicalDetailModel {
-    static modelName() {
-        return MedicalDetailModel.schema.name; 
-    }
     static primaryKey() {
         return MedicalDetailModel.schema.primaryKey;
     }
 
     static schema = {
-        'name': 'MedicalDetail',
+        'name': Constants.MEDICAL_DETAIL,
         'primaryKey': '_id',
 
         'properties': {

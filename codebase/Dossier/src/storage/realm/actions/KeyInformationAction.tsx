@@ -1,6 +1,7 @@
 // @flow
 import KeyInformationModel from '../models/KeyInformationModel';
 import type { IKeyInformationModel} from '../models/KeyInformationModel';
+import * as Constants from '../../../assets/constants'
 
 /**
  * Flow type of customerAction
@@ -30,7 +31,7 @@ export default (realmInstance: any): IKeyInformationAction => {
             nhsNumber: nhsNumber
           };
           realmInstance.write(()=> {
-            const savedKeyInfo = realmInstance.create(KeyInformationModel.modelName(), keyInformation, true);
+            const savedKeyInfo = realmInstance.create(Constants.KEY_INFORMATION, keyInformation, true);
             resolve(savedKeyInfo);
           });
         } catch (error) {
@@ -44,14 +45,14 @@ export default (realmInstance: any): IKeyInformationAction => {
      * @return {IKeyInformationModel}
      */
     retrieve: (): IKeyInformationModel => {
-        const data = realmInstance.objects(KeyInformationModel.modelName());
+        const data = realmInstance.objects(Constants.KEY_INFORMATION);
       return data;
     },
     clone: (): IKeyInformationModel => {
         // Realm doesn't actually populate object properties until you reference them
         // You also can't use a Realmn object in state as they are immutable, so
         // we make a copy here and return it for the views to use in their state
-        const data = realmInstance.objects(KeyInformationModel.modelName());
+        const data = realmInstance.objects(Constants.KEY_INFORMATION);
         let clone: IKeyInformationModel = {dateOfBirth: new Date()};
 
         if(data.length > 0) {

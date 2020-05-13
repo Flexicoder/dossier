@@ -13,7 +13,8 @@ import Allergy from '../components/Allergy';
 import MedicalDetail from '../components/MedicalDetail';
 import { keyInformationActions, medicalDetailActions } from '@dossier-storage/realm';
 import { IKeyInformationModel } from 'src/storage/realm/models/KeyInformationModel';
-import { IMedicalDetailModel } from 'src/storage/realm/models/MedicalDetailModel';
+import { IMedicalDetailModel } from '../storage/realm/models/MedicalDetailModel';
+import * as Constants from '../assets/constants'
 
 
 export default class KeyInfoPage extends React.Component {
@@ -21,8 +22,8 @@ export default class KeyInfoPage extends React.Component {
     super(props)
 
     //Set default stat values, so the screen can load before Realm responds
-    this.state = {keyInfo: { dateOfBirth: new Date() },
-                  medicalDetail: {}}
+    this.state = {[Constants.KEY_INFORMATION]: { dateOfBirth: new Date() },
+                  [Constants.MEDICAL_DETAIL]: {}}
 
     this.handleTextChange = this.handleTextChange.bind(this);
     this.save = this.save.bind(this)
@@ -38,25 +39,25 @@ export default class KeyInfoPage extends React.Component {
    }
 
    save() {
-    const keyInfo: IKeyInformationModel = this.state['keyInfo']
+    const keyInfo: IKeyInformationModel = this.state[Constants.KEY_INFORMATION]
     keyInfo._id = 1
     keyInformationActions.save(keyInfo)
 
-    const medicalDetails: IMedicalDetailModel = this.state['medicalDetail']
+    const medicalDetails: IMedicalDetailModel = this.state[Constants.MEDICAL_DETAIL]
     medicalDetails._id = 1
     medicalDetailActions.save(medicalDetails)
 
    }
 
   componentDidMount() {
-    this.setState({keyInfo: keyInformationActions.clone()})
+    this.setState({[Constants.KEY_INFORMATION]: keyInformationActions.clone()})
 
-    this.setState({medicalDetail: medicalDetailActions.clone()})
+    this.setState({[Constants.MEDICAL_DETAIL]: medicalDetailActions.clone()})
 }
 
     render () {
-      const keyInfo = this.state['keyInfo']
-      const medicalDetail = this.state['medicalDetail']
+      const keyInfo = this.state[Constants.KEY_INFORMATION]
+      const medicalDetail = this.state[Constants.MEDICAL_DETAIL]
       return (
         <SafeAreaView style={styles.scrollContainer}>
         <StatusBar barStyle="light-content" backgroundColor="#468189" />

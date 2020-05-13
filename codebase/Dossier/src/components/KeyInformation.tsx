@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, TextInput, View } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import styles from '../assets/styles'
+import * as Constants from '../assets/constants'
 
 interface IKeyInformationComponent {
     data: IKeyInformationProps
@@ -26,7 +27,7 @@ export default class KeyInformation extends Component<IKeyInformationComponent> 
     }
 
     onTextChange(propertyName, value) {
-        this.props.onTextChange('keyInfo', propertyName, value);
+        this.props.onTextChange(Constants.KEY_INFORMATION, propertyName, value);
     }
 
     onChange = (event: any, selectedDate: Date | null | undefined) => {

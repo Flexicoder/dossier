@@ -1,13 +1,12 @@
+import * as Constants from '../../../assets/constants'
+
 export default class KeyInformationModel {
-    static modelName(): string {
-        return KeyInformationModel.schema.name; 
-    }
     static primaryKey() {
         return KeyInformationModel.schema.primaryKey;
     }
 
     static schema = {
-        'name': 'KeyInformation',
+        'name': Constants.KEY_INFORMATION,
         'primaryKey': '_id',
 
         'properties': {
